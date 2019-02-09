@@ -7,98 +7,7 @@
     android:orientation="vertical"
     tools:context=".write_view">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="제목"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="제목을 입력하십시오."/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="내용"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:lines="10"
-            android:hint="제목을 입력하십시오."/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="파일"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"/>
-        <Button
-            android:id="@+id/bt_choose"
-            android:text="Choose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/bt_upload"
-            android:text="Upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:hint="파일업로드."/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="CANCEL"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="UPLOAD"/>
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iv_preview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" /> <LinearLayout
+ <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -110,6 +19,7 @@
         android:textColor="@color/black"
         android:layout_margin="10dp"/>
     <EditText
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -129,14 +39,36 @@
             android:textColor="@color/black"
             android:layout_margin="10dp"/>
         <EditText
+            android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:lines="10"
-            android:hint="제목을 입력하십시오."/>
+            android:lines="5"
+            android:hint="내용을 입력하십시오."/>
 
     </LinearLayout>
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="해시태그"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"/>
+        <EditText
+            android:id="@+id/tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="태그을 입력하십시오."/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -149,36 +81,34 @@
             android:textSize="30sp"
             android:textColor="@color/black"
             android:layout_margin="10dp"/>
+
         <Button
-            android:id="@+id/bt_choose"
+            android:id="@+id/btn_choose"
             android:text="Choose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/bt_upload"
-            android:text="Upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
         <TextView
+            android:id="@+id/status"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:hint="파일업로드."/>
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+
 
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:text="CANCEL"/>
         <Button
+            android:id="@+id/btn_upload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -186,9 +116,6 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/iv_preview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

@@ -1,35 +1,66 @@
 {
   "project_info": {
-    "project_number": "320858914437",
-    "firebase_url": "https://foodmate-7f961.firebaseio.com",
-    "project_id": "foodmate-7f961",
-    "storage_bucket": "foodmate-7f961.appspot.com"
+    "project_number": "778041227681",
+    "firebase_url": "https://foodmate-f68bd.firebaseio.com",
+    "project_id": "foodmate-f68bd",
+    "storage_bucket": "foodmate-f68bd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:320858914437:android:4a8f95e079c270b9",
+        "mobilesdk_app_id": "1:778041227681:android:4a8f95e079c270b9",
         "android_client_info": {
           "package_name": "com.example.seyeong.foodmate"
         }
       },
       "oauth_client": [
         {
-          "client_id": "320858914437-4787iv9fii9ofus1us7cbtpd4cnmifmr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.seyeong.foodmate",
-            "certificate_hash": "d9af9debd7215bfc8652489f9383f092082e35b3"
-          }
-        },
-        {
-          "client_id": "320858914437-4fbt2k0ce2sbol9ov5rjifpd4gldoqrs.apps.googleusercontent.com",
+          "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB9KjmJXhnWk1SHzLBTsn7vpHTCsINfsuc"
+          "current_key": "AIzaSyAP71JWbFiHNWqtelAWdTGpxE-RzpqphKM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778041227681:android:6dc06d91e79c3622",
+        "android_client_info": {
+          "package_name": "kr.hs.foodmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778041227681-qfmh4cq4l171o12ultp8s92m7onri400.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.foodmate",
+            "certificate_hash": "acbc76e7d817730d5fd2e43091ad95dd52b9a955"
+          }
+        },
+        {
+          "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP71JWbFiHNWqtelAWdTGpxE-RzpqphKM"
         }
       ],
       "services": {
@@ -40,7 +71,51 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "320858914437-4fbt2k0ce2sbol9ov5rjifpd4gldoqrs.apps.googleusercontent.com",
+              "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778041227681:android:6ae00bc60e01f950",
+        "android_client_info": {
+          "package_name": "s2017s12.kr.hs.mirim.foodmate_su"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778041227681-rvn1db9babla4arncgah3860vds8t1p7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "s2017s12.kr.hs.mirim.foodmate_su",
+            "certificate_hash": "4b338cc38064ef88e33ddc564e6f2e4c2f5bc542"
+          }
+        },
+        {
+          "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP71JWbFiHNWqtelAWdTGpxE-RzpqphKM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

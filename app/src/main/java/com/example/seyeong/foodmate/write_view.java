@@ -10,15 +10,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -28,9 +34,16 @@ public class write_view extends AppCompatActivity {
 
     private static final String TAG = "write_view";
 
+
+    private EditText title;
+    private EditText content;
+    private EditText tag;
+    private TextView status;
     private Button btChoose;
     private Button btUpload;
-    private ImageView ivPreview;
+    private FirebaseAuth firebaseAuth;
+    private DatabaseReference databaseReference;
+
 
     private Uri filePath;
 
@@ -39,20 +52,28 @@ public class write_view extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_view);
 
-        btChoose = findViewById(R.id.bt_choose);
-        btUpload = findViewById(R.id.bt_upload);
-        ivPreview = findViewById(R.id.iv_preview);
+        firebaseAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
+        title = findViewById(R.id.title);
+        content = findViewById(R.id.content);
+        tag = findViewById(R.id.tag);
+        status = findViewById(R.id.status);
+
+        btChoose = findViewById(R.id.btn_choose);
+        btUpload = findViewById(R.id.btn_upload);
+
 
         //버튼 클릭 이벤트
         btChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "이미지를 선택하세요."), 0);
-            }
-        });
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "이미지를 선택하세요."), 0);
+    }
+});
 
         btUpload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +93,6 @@ public class write_view extends AppCompatActivity {
             Log.d(TAG, "uri:" + String.valueOf(filePath));
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
-                ivPreview.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -80,7 +100,15 @@ public class write_view extends AppCompatActivity {
     }
     //upload the file
     private void uploadFile() {
+
+        final String uptitle = title.getText().toString();
+        final String upcontent = content.getText().toString();
+        final String uptag=tag.getText().toString();
+
         if (filePath != null) {
+            databaseReference.child("board").child("title").child(uptitle).child("title").push().setValue(uptitle);
+            databaseReference.child("board").child("title").child(uptitle).child("content").push().setValue(upcontent);
+            databaseReference.child("board").child("title").child(uptitle).child("tag").push().setValue(uptag);
             final ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("업로드중...");
             progressDialog.show();
@@ -90,7 +118,7 @@ public class write_view extends AppCompatActivity {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMHH_mmss");
             Date now = new Date();
             String filename = formatter.format(now) + ".png";
-            StorageReference storageRef = storage.getReferenceFromUrl("gs://foodmate-7f961.appspot.com").child("images/" + filename);
+            StorageReference storageRef = storage.getReferenceFromUrl("gs://foodmate-f68bd.appspot.com").child("images/" + filename);
 
             storageRef.putFile(filePath)
 
@@ -99,6 +127,7 @@ public class write_view extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
                             Toast.makeText(getApplicationContext(), "업로드 완료!", Toast.LENGTH_SHORT).show();
+                            status.setText("선택됨");
                         }
                     })
                     //실패시
