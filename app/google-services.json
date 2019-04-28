@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "778041227681",
+    "firebase_url": "https://foodmate-f68bd.firebaseio.com",
+    "project_id": "foodmate-f68bd",
+    "storage_bucket": "foodmate-f68bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778041227681:android:a99df1d6677ededd",
+        "android_client_info": {
+          "package_name": "kr.ds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP71JWbFiHNWqtelAWdTGpxE-RzpqphKM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778041227681:android:48f5a4143dba4beb",
+        "android_client_info": {
+          "package_name": "kr.hs.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778041227681-a1t2dn4asgcb8496t4ootoiitl1rqdeh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.firebase",
+            "certificate_hash": "acbc76e7d817730d5fd2e43091ad95dd52b9a955"
+          }
+        },
+        {
+          "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP71JWbFiHNWqtelAWdTGpxE-RzpqphKM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778041227681:android:6dc06d91e79c3622",
+        "android_client_info": {
+          "package_name": "kr.hs.foodmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778041227681-qfmh4cq4l171o12ultp8s92m7onri400.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.foodmate",
+            "certificate_hash": "acbc76e7d817730d5fd2e43091ad95dd52b9a955"
+          }
+        },
+        {
+          "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP71JWbFiHNWqtelAWdTGpxE-RzpqphKM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778041227681-d4a4ubn4ji7l53j02908sle8jqrl7igd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
